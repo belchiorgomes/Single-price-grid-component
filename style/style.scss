@@ -1,0 +1,72 @@
+@charset "UTF-8";
+
+*,*::after,*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+$Teal-500: hsl(179, 62%, 43%);
+$Green-400: hsl(71, 73%, 54%);
+$Teal-100: hsl(204, 43%, 93%);
+$Gray-500: hsl(218, 22%, 67%);
+
+body{
+    width: 100vw;
+    height: 100vh;
+    background-color: $Teal-100;
+    display: grid;
+    place-content: center;
+}
+
+#container{
+    width: 350px;
+    display: grid;
+    grid-template-columns: 1fr;
+    box-shadow: 0 0 8px $Gray-500;
+    border-radius: .4rem;
+    overflow: hidden;
+
+    @media (min-width: 750px){
+        width: 700px;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: "community community"
+                             "subscription container-3";
+
+        .container-community{
+            grid-area: community;
+        }
+
+        .container-community{
+            grid-area: community;
+        }
+
+        .container-container-3{
+            grid-area: container-3;
+        }
+    }
+
+    section{
+        padding: 1.3rem;
+
+        p{
+            color: $Gray-500;
+        }
+    }
+    
+    .container-community{
+        background-color: white;
+
+        h2{
+            color: $Teal-500;
+        }
+
+        span{
+            color: $Green-400;
+        }
+    }
+
+    .container-subscription{
+        background-color: $Teal-500;
+    }
+}

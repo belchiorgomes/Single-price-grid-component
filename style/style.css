@@ -1,0 +1,56 @@
+*, *::after, *::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: hsl(204, 43%, 93%);
+  display: grid;
+  place-content: center;
+}
+
+#container {
+  width: 350px;
+  display: grid;
+  grid-template-columns: 1fr;
+  box-shadow: 0 0 8px hsl(218, 22%, 67%);
+  border-radius: 0.4rem;
+  overflow: hidden;
+}
+@media (min-width: 750px) {
+  #container {
+    width: 700px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: "community community" "subscription container-3";
+  }
+  #container .container-community {
+    grid-area: community;
+  }
+  #container .container-community {
+    grid-area: community;
+  }
+  #container .container-container-3 {
+    grid-area: container-3;
+  }
+}
+#container section {
+  padding: 1.3rem;
+}
+#container section p {
+  color: hsl(218, 22%, 67%);
+}
+#container .container-community {
+  background-color: white;
+}
+#container .container-community h2 {
+  color: hsl(179, 62%, 43%);
+}
+#container .container-community span {
+  color: hsl(71, 73%, 54%);
+}
+#container .container-subscription {
+  background-color: hsl(179, 62%, 43%);
+}/*# sourceMappingURL=style.css.map */
