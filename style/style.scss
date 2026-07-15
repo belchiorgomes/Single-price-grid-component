@@ -59,14 +59,57 @@ body{
 
         h2{
             color: $Teal-500;
+            margin-block-end: 1.3rem;
         }
 
         span{
+            display: block;
             color: $Green-400;
+            margin-block-end: 1rem;
         }
     }
 
     .container-subscription{
         background-color: $Teal-500;
+
+        h2{
+            color: $Teal-100;
+            margin-block-end: 1.3rem;
+        }
+
+        p{
+            color: $Teal-100;
+        }
+
+        .container-span{
+            display: flex;
+            align-items: center;
+            span{
+                &:nth-of-type(1){
+                    font-size: 2em;
+                    color: white;
+                    margin-inline-end: 12px;
+                }
+            
+                &:nth-of-type(2){
+                    color: $Teal-100;
+                    vertical-align: text-top;
+                }
+            }
+
+        }
+
+        button{
+            width: 100%;
+            margin-top: 1.3rem;
+            outline-color: transparent;
+            border: none;
+            border-radius: .4rem;
+            padding: 1rem 1.4rem;
+            background-color: $Green-400;
+            color: white;
+            font-size: 1em;
+            box-shadow: 0 0 8px $Green-400;
+        }
     }
 }

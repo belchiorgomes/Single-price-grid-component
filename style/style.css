@@ -47,10 +47,45 @@ body {
 }
 #container .container-community h2 {
   color: hsl(179, 62%, 43%);
+  margin-block-end: 1.3rem;
 }
 #container .container-community span {
+  display: block;
   color: hsl(71, 73%, 54%);
+  margin-block-end: 1rem;
 }
 #container .container-subscription {
   background-color: hsl(179, 62%, 43%);
+}
+#container .container-subscription h2 {
+  color: hsl(204, 43%, 93%);
+  margin-block-end: 1.3rem;
+}
+#container .container-subscription p {
+  color: hsl(204, 43%, 93%);
+}
+#container .container-subscription .container-span {
+  display: flex;
+  align-items: center;
+}
+#container .container-subscription .container-span span:nth-of-type(1) {
+  font-size: 2em;
+  color: white;
+  margin-inline-end: 12px;
+}
+#container .container-subscription .container-span span:nth-of-type(2) {
+  color: hsl(204, 43%, 93%);
+  vertical-align: text-top;
+}
+#container .container-subscription button {
+  width: 100%;
+  margin-top: 1.3rem;
+  outline-color: transparent;
+  border: none;
+  border-radius: 0.4rem;
+  padding: 1rem 1.4rem;
+  background-color: hsl(71, 73%, 54%);
+  color: white;
+  font-size: 1em;
+  box-shadow: 0 0 8px hsl(71, 73%, 54%);
 }/*# sourceMappingURL=style.css.map */
