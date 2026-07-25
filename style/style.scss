@@ -12,12 +12,17 @@ $Teal-100: hsl(204, 43%, 93%);
 $Gray-500: hsl(218, 22%, 67%);
 
 body{
+    font-family: "Karla", sans-serif;
     width: 100vw;
     height: 100vh;
     background-color: $Teal-100;
     display: grid;
     place-content: center;
+    gap: 1.2rem;
 }
+
+h2{font-weight: 700;}
+p{font-weight: 400; line-height: 1.4;}
 
 #container{
     width: 350px;
@@ -25,10 +30,13 @@ body{
     grid-template-columns: 1fr;
     box-shadow: 0 0 8px $Gray-500;
     border-radius: .4rem;
-    overflow: hidden;
+    // overflow: hidden;
+    overflow-x: auto;
+    transition: all .6s ease-in-out;
+
 
     @media (min-width: 750px){
-        width: 700px;
+        width: 600px;
         grid-template-columns: repeat(2, 1fr);
         grid-template-areas: "community community"
                              "subscription container-3";
@@ -37,8 +45,8 @@ body{
             grid-area: community;
         }
 
-        .container-community{
-            grid-area: community;
+        .container-subscription{
+            grid-area: subscription;
         }
 
         .container-container-3{
@@ -47,7 +55,11 @@ body{
     }
 
     section{
+        display: flex;
+        flex-direction: column;
+        gap: 1.2rem;
         padding: 1.3rem;
+        transition: all .6s ease-in-out;
 
         p{
             color: $Gray-500;
@@ -59,13 +71,13 @@ body{
 
         h2{
             color: $Teal-500;
-            margin-block-end: 1.3rem;
+            // margin-block-end: 1.3rem;
         }
 
         span{
             display: block;
             color: $Green-400;
-            margin-block-end: 1rem;
+            // margin-block-end: 1rem;
         }
     }
 
@@ -74,7 +86,7 @@ body{
 
         h2{
             color: $Teal-100;
-            margin-block-end: 1.3rem;
+            // margin-block-end: 1.3rem;
         }
 
         p{
@@ -101,15 +113,24 @@ body{
 
         button{
             width: 100%;
-            margin-top: 1.3rem;
+            // margin-top: 1.3rem;
             outline-color: transparent;
+            font-weight: 700;
             border: none;
             border-radius: .4rem;
             padding: 1rem 1.4rem;
             background-color: $Green-400;
             color: white;
             font-size: 1em;
-            box-shadow: 0 0 8px $Green-400;
+            box-shadow: 0px 0px 8px rgba($Green-400, .85);
+        }
+    }
+
+    .container-3{
+        background-color: rgba($Teal-500, $alpha: .89);
+        h2, p{
+            // margin-block: 1.3rem;
+            color: $Teal-100;
         }
     }
 }

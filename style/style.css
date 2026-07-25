@@ -5,11 +5,22 @@
 }
 
 body {
+  font-family: "Karla", sans-serif;
   width: 100vw;
   height: 100vh;
   background-color: hsl(204, 43%, 93%);
   display: grid;
   place-content: center;
+  gap: 1.2rem;
+}
+
+h2 {
+  font-weight: 700;
+}
+
+p {
+  font-weight: 400;
+  line-height: 1.4;
 }
 
 #container {
@@ -18,26 +29,31 @@ body {
   grid-template-columns: 1fr;
   box-shadow: 0 0 8px hsl(218, 22%, 67%);
   border-radius: 0.4rem;
-  overflow: hidden;
+  overflow-x: auto;
+  transition: all 0.6s ease-in-out;
 }
 @media (min-width: 750px) {
   #container {
-    width: 700px;
+    width: 600px;
     grid-template-columns: repeat(2, 1fr);
     grid-template-areas: "community community" "subscription container-3";
   }
   #container .container-community {
     grid-area: community;
   }
-  #container .container-community {
-    grid-area: community;
+  #container .container-subscription {
+    grid-area: subscription;
   }
   #container .container-container-3 {
     grid-area: container-3;
   }
 }
 #container section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
   padding: 1.3rem;
+  transition: all 0.6s ease-in-out;
 }
 #container section p {
   color: hsl(218, 22%, 67%);
@@ -47,19 +63,16 @@ body {
 }
 #container .container-community h2 {
   color: hsl(179, 62%, 43%);
-  margin-block-end: 1.3rem;
 }
 #container .container-community span {
   display: block;
   color: hsl(71, 73%, 54%);
-  margin-block-end: 1rem;
 }
 #container .container-subscription {
   background-color: hsl(179, 62%, 43%);
 }
 #container .container-subscription h2 {
   color: hsl(204, 43%, 93%);
-  margin-block-end: 1.3rem;
 }
 #container .container-subscription p {
   color: hsl(204, 43%, 93%);
@@ -79,13 +92,19 @@ body {
 }
 #container .container-subscription button {
   width: 100%;
-  margin-top: 1.3rem;
   outline-color: transparent;
+  font-weight: 700;
   border: none;
   border-radius: 0.4rem;
   padding: 1rem 1.4rem;
   background-color: hsl(71, 73%, 54%);
   color: white;
   font-size: 1em;
-  box-shadow: 0 0 8px hsl(71, 73%, 54%);
+  box-shadow: 0px 0px 8px rgba(191.9317, 223.329, 52.071, 0.85);
+}
+#container .container-3 {
+  background-color: rgba(41.667, 177.633, 175.3669, 0.89);
+}
+#container .container-3 h2, #container .container-3 p {
+  color: hsl(204, 43%, 93%);
 }/*# sourceMappingURL=style.css.map */
